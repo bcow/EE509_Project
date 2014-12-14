@@ -1,0 +1,153 @@
+\documentclass[12pt,fleqn]{article}
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amssymb}
+\usepackage{latexsym, amsmath, amscd,amsthm}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+\usepackage{pdfsync}
+\usepackage{units}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{gensymb}
+
+\usepackage{paralist}
+\usepackage{color}
+
+\usepackage[draft]{hyperref}
+\usepackage{url}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+	\addtolength{\oddsidemargin}{-.875in}
+	\addtolength{\evensidemargin}{-.875in}
+	\addtolength{\textwidth}{1.75in}
+
+	\addtolength{\topmargin}{-.875in}
+	\addtolength{\textheight}{1.75in}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  References, figures, tables & captions
+\usepackage[round, comma, authoryear, sort]{natbib}
+\bibliographystyle{agufull04}
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+\usepackage{setspace}
+\usepackage{caption} 
+\captionsetup[figure]{font={footnotesize,stretch=1}}
+\captionsetup[table]{font={footnotesize,stretch=1}}
+
+\usepackage{wrapfig}
+
+
+ \usepackage{lineno}
+
+%  To add line numbers to lines with equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Begin user defined commands
+
+\newcommand{\map}[1]{\xrightarrow{#1}}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+%\newcommand{\H}{\mathbb H}
+%\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathcal{E}}
+
+\newcommand{\eps}{\varepsilon}
+
+
+\newcommand{\zbar}{\overline{\mathbb{Z}}}
+\newcommand{\qbar}{\overline{\mathbb{Q}}}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\bs}{\backslash}
+\newcommand{\reci}[1]{\frac{1}{#1}}
+
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{im}
+
+
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tfor}{\text{ for }}
+\newcommand{\twith}{\text{ with }}
+\newcommand{\ton}{\text{ on }}
+\newcommand{\tin}{\text{ in }}
+\newcommand{\tif}{\text{ if }}
+\newcommand{\tor}{\text{ or }}
+\newcommand{\tis}{\text{ is }}
+
+
+
+%  End user defined commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\mathindent}{0cm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These establish different environments for stating Theorems, Lemmas, Remarks, etc.
+
+\newtheorem{Thm}{Theorem}
+\newtheorem{Prop}[Thm]{Proposition}
+\newtheorem{Lem}[Thm]{Lemma}
+\newtheorem{Cor}[Thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{Def}[Thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{Rem}[Thm]{Remark}
+\newtheorem{Ex}[Thm]{Example}
+
+\theoremstyle{definition}
+\newtheorem{Problem}{Problem}
+
+\newenvironment{Solution}{\noindent{\it Solution.}}{\qed}
+
+
+% $\left[ \begin{matrix} a \\ b  \\ c \end{matrix} \right]$
+
+% End environments 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\author{Betsy Cowdery}
+\title{}
+\date{December 12, 2014}
+
+
+
+\end{document}

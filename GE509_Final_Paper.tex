@@ -1,0 +1,316 @@
+\documentclass[12pt,fleqn]{article}
+\linespread{2}
+
+\usepackage{latexsym, amsmath, amscd,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+\usepackage{pdfsync}
+\usepackage{units}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{gensymb}
+
+\usepackage{paralist}
+\usepackage{color}
+
+\usepackage[draft]{hyperref}
+\usepackage{url}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+	\addtolength{\oddsidemargin}{-.875in}
+	\addtolength{\evensidemargin}{-.875in}
+	\addtolength{\textwidth}{1.75in}
+
+	\addtolength{\topmargin}{-.875in}
+	\addtolength{\textheight}{1.75in}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  References, figures, tables & captions
+\usepackage[round, comma, authoryear, sort]{natbib}
+\bibliographystyle{agufull04}
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+\usepackage{setspace}
+\usepackage{caption} 
+\captionsetup[figure]{font={footnotesize,stretch=1}}
+\captionsetup[table]{font={footnotesize,stretch=1}}
+
+\usepackage{wrapfig}
+
+
+ \usepackage{lineno}
+
+%  To add line numbers to lines with equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Begin user defined commands
+
+\newcommand{\map}[1]{\xrightarrow{#1}}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+%\newcommand{\H}{\mathbb H}
+%\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathcal{E}}
+
+\newcommand{\eps}{\varepsilon}
+
+
+\newcommand{\zbar}{\overline{\mathbb{Z}}}
+\newcommand{\qbar}{\overline{\mathbb{Q}}}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\bs}{\backslash}
+\newcommand{\reci}[1]{\frac{1}{#1}}
+
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{im}
+
+
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tfor}{\text{ for }}
+\newcommand{\twith}{\text{ with }}
+\newcommand{\ton}{\text{ on }}
+\newcommand{\tin}{\text{ in }}
+\newcommand{\tif}{\text{ if }}
+\newcommand{\tor}{\text{ or }}
+\newcommand{\tis}{\text{ is }}
+
+
+
+%  End user defined commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\mathindent}{0cm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These establish different environments for stating Theorems, Lemmas, Remarks, etc.
+
+\newtheorem{Thm}{Theorem}
+\newtheorem{Prop}[Thm]{Proposition}
+\newtheorem{Lem}[Thm]{Lemma}
+\newtheorem{Cor}[Thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{Def}[Thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{Rem}[Thm]{Remark}
+\newtheorem{Ex}[Thm]{Example}
+
+\theoremstyle{definition}
+\newtheorem{Problem}{Problem}
+
+\newenvironment{Solution}{\noindent{\it Solution.}}{\qed}
+
+
+% $\left[ \begin{matrix} a \\ b  \\ c \end{matrix} \right]$
+
+% End environments 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr,lipsum}
+
+\makeatletter
+
+ \newsavebox{\@linebox}
+ \savebox{\@linebox}[3em][t]{\parbox[t]{3em}{%
+   \@tempcnta\@ne\relax
+   \loop{\underline{\scriptsize\the\@tempcnta}}\\
+     \advance\@tempcnta by \@ne\ifnum\@tempcnta<48\repeat}}
+
+ \pagestyle{fancy}
+ \fancyhead{}
+ \fancyfoot{}
+ \fancyhead[CO]{\scriptsize How to Count Lines}
+ \fancyhead[RO,LE]{\footnotesize\thepage}
+%% insert this block within a conditional
+ \fancyhead[LE]{\footnotesize\thepage\begin{picture}(0,0)%
+      \put(-26,-25){\usebox{\@linebox}}%
+      \end{picture}}
+
+ \fancyhead[LO]{%
+    \begin{picture}(0,0)%
+      \put(-18,-25){\usebox{\@linebox}}%
+     \end{picture}}
+\fancyfoot[C]{\scriptsize Draft copy}
+%% end conditional
+\makeatother
+
+
+\begin{document}
+
+\begin{singlespace}
+\author{Betsy Cowdery}
+\title{}
+\date{December 12, 2014}
+
+\maketitle
+
+
+\begin{abstract}
+The  goal of this project is to develop a multivariate Bayesian meta-analytical model that synthesizes plant trait data from multiple studies while accounting for various sources of uncertainty. Using observed sample mean, sample size, and a sample error statistics for multiple plant traits, we aim to produced well constrained estimates of mean and precision for a single trait. This has be done in PEcAn (the Predictive Ecosystem Analyzer) using a univariate model [1], however, a multivariate model can leverage the fact that many plant traits are highly correlated [2] to constrain our estimates even further. This may be especially useful improving predictions for studies in which observations are missing. 
+
+\end{abstract}
+\end{singlespace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\linenumbers
+\section{Introduction}
+ 
+
+ - what is meta-analysis\\
+ - why is it necessary in this case?\\
+ 
+ - what is PEcAn?\\
+ - what does PEcAn already do\\
+ 
+ - what did they do in the nature paper?\\
+ - how do we plan on using their findings\\
+ 
+ 
+ 
+The  goal of this project is to develop a multivariate Bayesian meta-analytical model that synthesizes plant trait data from multiple studies while accounting for various sources of uncertainty. Using observed sample mean, sample size, and a sample error statistics for multiple plant traits, we aim to produced well constrained estimates of mean and precision for a single trait. This has be done in PEcAn (the Predictive Ecosystem Analyzer) using a univariate model, however, a multivariate model can leverage the fact that many plant traits are highly correlated to constrain our estimates even further. This may be especially useful improving predictions for studies in which observations are missing. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+\subsection{Experimental Data}
+For this project I am using the data set compiled from the global plant trait network (Glopnet), a database created to quantify leaf economics across the world’s plant species  \citep{Wright}.
+
+ These data are described and are available as supplemental material in \citep{Wright}. 
+
+From this data set I will be focusing on six plant-traits:
+
+(1) Leaf mass per area (LMA)\\
+(2) Photosynthetic capacity (Amass) - photosynthetic assimilation rates measured under high light, ample soil moisture and ambient CO2\\
+(3) Leaf nitrogen (N) \\
+(4) Leaf phosphorus (P)\\
+(5) Dark respiration rate (Rmass)  \\
+(6) Leaf lifespan (LL) 
+
+\subsection{Univariate Model}
+
+\noindent Data Model :\\
+\begin{linenomath*}
+$Y_{i,j} \sim N(\mu_{i,j}, \sigma^2) $\\
+ \end{linenomath*}
+
+\noindent Process Model :\\
+\begin{linenomath*}
+$\sigma^2 \sim IG(s_1,s_2)$\\
+$\mu_{i,j} \sim N(\mu_0, V_\mu)$\\
+ \end{linenomath*}
+
+\subsection{Multivariate Model}
+
+\noindent Data Model :\\
+\begin{linenomath*}
+$Y_i \sim N_p(\vec{\mu}_i, \Sigma) $\\
+$Y^{(0)}_{i,j} \sim N_p(Y_{i,j}, \sigma^2)$\\
+ \end{linenomath*}
+ 
+
+\noindent Process Model :\\
+\begin{linenomath*}
+$\sigma^2 \sim IG(s_1,s_2)$\\
+$\mu_{i,j} \sim N(\mu_0, V_\mu)$\\
+$\Sigma \sim IW(V, df)$ \\
+ \end{linenomath*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and Discussion}
+
+Each of the two plot matrices in figure 1 consist of three parts. The lower left half of the plot matrix shows scatterplots of each combination of variables with with a regression line in red if the regression is statistically significant (p<.01). The top right half of the plot matrix shows pairwise correlation. The plots on the diagonal show histograms of the collected data. 
+
+The lefthand matrix uses all the available data and the righthand matrix uses only studies in which every plant trait was measured. This significantly reduces the number of data points. 
+
+Using the full dataset, every plant trait has a statistically significant correlation with all the others, which suggests that a multivariate analysis will in fact be informative. Using the limited dataset,correlation values are lower and one pair of traits no longer have a statistically significant correlation. 
+
+
+When using data that excludes all studies with missing observations, there is practically no difference between the two model’s estimated means for each of the variables. However, for both models, including studies with NA’s produces estimated means that are significantly different from those produced with data excluding NA’s. For the variables Log.LMA and Log.Amass, the estimated means from the univariate and multivariate models were very close, but for the remaining variables, they were noticeably different, with the estimated mean from the univariate model always closer to the data mean than the estimated mean from the multivariate model.
+
+Contrary to what I expected, the variation in the multivariate model showed little to no improvement over the univariate.  The multivariate model produced posterior distributions with larger variance around the mean (except for Log.Nmass where the SE for the univariate model was larger by 3.3e-06, a small amount relative to the size of the mean.)
+
+When studies with missing observations are included, the standard errors begin to behave more like one might expect. The posterior distributions from the multivariate model have smaller variances for all the variables except Log.Pmass. However, it is difficult to see the difference since the expected means of the variables are no longer similar. 
+
+
+\subsection{Univariate Model}
+\subsubsection{Excluding data with missing values}
+\subsubsection{Including data with missing values}
+
+
+\subsection{Multivariate Model}
+
+
+\subsubsection{Excluding data with missing values}
+\subsubsection{Including data with missing values}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+Applying Bayesian models to the GLOPNET data has proven to be useful in two very important ways: First of all a Bayesian models (both univariate and multivariate) can handle data with missing values. This changed the sample size from 42 to 2,.... Such a considerable increase in sample size helped to constrain parameter estimates. Secondly, introducing a multivariate model, changed the shape and sizes of the joint probability confidence regions. The changes at times were subtle and could go undetected when projected back into single probability functions. However, changes such as decreased overall area and increases in elongation of the confidence ellipse will improve our estimation of plant traits. 
+
+
+
+
+\newpage
+\begin{singlespace}
+\end{singlespace}
+
+
+
+
+
+\newpage
+
+\cite{Clark2007}
+\cite{Dietze2013}
+\cite{Dietze2014}
+\cite{Gelman2013}
+\cite{Lebauer2013}
+\cite{LEBAUER2013}
+\cite{Wright}
+
+\begin{singlespace}
+\bibliography{/Users/elizabethcowdery/Documents/Bib/GE509_Project.bib}
+\end{singlespace}
+\lipsum
+\end{document}

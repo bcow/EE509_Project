@@ -3,7 +3,6 @@ library(coda)
 library(mvtnorm)
 library(nnet)
 
-setwd("/Users/elizabethcowdery/R Projects/EE509/Project")
 glopnet <- read.csv("glopnet.csv")
 glopnet[c("X")] <- NULL
 glopnet[c("X.1")] <- NULL
@@ -66,19 +65,19 @@ j.model   <- jags.model (file = textConnection(MultModel), data = data, inits = 
 
 RandMultModel = "
 model{
-  prec.Sigma~dwish(Vsig[,],n)
-  Sigma[1:n,1:n] <- inverse(prec.Sigma[,])
+  prec.Sigma~dwish(Vsig[,],n)                   # precision
+  Sigma[1:n,1:n] <- inverse(prec.Sigma[,])      # variance
 
-  for(i in 1:nds){alpha.ds[i]~dnorm(0,tau.d)}
-  tau.d~dgamma(.001,.001)
+  for(i in 1:nds){alpha.ds[i]~dnorm(0,tau.d)}   # random effect drawn form normal distribution centered at 0
+  tau.d~dgamma(.001,.001)                       # with variance tau.d
 
-  for(i in 1:N){
+  for(i in 1:N){                  # create matrix of random effects 
     for(j in 1:n){
       a[i,j] <- alpha.ds[DSI[i]]
     }
   }
 
-  beta[1:n]~dmnorm(mu0[],Vmu)
+  beta[1:n]~dmnorm(mu0[],Vmu)     # multivariate step
 
   for(i in 1:N){mu[i,1:n] <- beta[1:n]+a[i,1:n]}
 

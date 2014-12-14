@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_Ecowdery.aux
+The style file: agufull04.bst
+Case mismatch error between cite keys Lebauer2013 and LEBAUER2013
+---line 11 of file Paper_Ecowdery.aux
+ : \citation{Gelman2013,Leb2013,LEBAUER2013,Lebauer2013
+ :                                                     ,Plummer2010}
+I'm skipping whatever remains of this command
+Database file #1: /Users/elizabethcowdery/Documents/Bib/GE509_Project.bib.bib
+Repeated entry---line 84 of file /Users/elizabethcowdery/Documents/Bib/GE509_Project.bib.bib
+ : @article{LEBAUER2013
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Leb2013"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 8 entries,
+            3029 wiz_defined-function locations,
+            1121 strings with 11705 characters,
+and the built_in function-call counts, 10254 in all, are:
+= -- 905
+> -- 745
+< -- 3
++ -- 257
+- -- 219
+* -- 806
+:= -- 1142
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 94
+chr.to.int$ -- 8
+cite$ -- 24
+duplicate$ -- 912
+empty$ -- 478
+format.name$ -- 243
+if$ -- 2014
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 136
+newline$ -- 31
+num.names$ -- 32
+pop$ -- 461
+preamble$ -- 1
+purify$ -- 89
+quote$ -- 0
+skip$ -- 444
+stack$ -- 0
+substring$ -- 269
+swap$ -- 723
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 63
+warning$ -- 0
+while$ -- 39
+width$ -- 0
+write$ -- 97
+(There were 2 error messages)

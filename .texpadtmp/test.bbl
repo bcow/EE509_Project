@@ -1,0 +1,66 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Clark}(2007)}]{Clark2007}
+Clark, J.~S. (2007), \textit{{Models for Ecological Data: An Introduction}},
+  617 pp., Princeton University Press.
+
+\bibitem[{\textit{Dietze et~al.}(2014)\textit{Dietze, Serbin, Davidson, Desai,
+  Feng, Kelly, Kooper, Lebauer, Mantooth, McHenry, and Wang}}]{Dietze2014}
+Dietze, M.~C., S.~P. Serbin, C.~Davidson, A.~R. Desai, X.~Feng, R.~Kelly,
+  R.~Kooper, D.~Lebauer, J.~Mantooth, K.~McHenry, and D.~Wang (2014), {A
+  quantitative assessment of a terrestiral biosphere model’s data needs
+  across North American biomes}, \textit{Journal of Geophysical Research:
+  Biogeosciences}, \textit{119}(3), 286--300,
+  \doi{10.1002/2013JG002392.Received}.
+
+\bibitem[{\textit{Gelman et~al.}(2013)\textit{Gelman, Carlin, Stern, Dunson,
+  Vehtari, and Rubin}}]{Gelman2013}
+Gelman, A., J.~B. Carlin, H.~S. Stern, D.~B. Dunson, A.~Vehtari, and D.~B.
+  Rubin (2013), \textit{{Bayesian Data Analysis, Third Edition}}, vol.~1, 675
+  pp., CRC Press.
+
+\bibitem[{\textit{Johnson and Wichern}(2007)}]{Johnson2007}
+Johnson, R.~A., and D.~W. Wichern (2007), \textit{{Applied Multivariate
+  Statistical Analysis}}, 773 pp., Pearson Prentice Hall.
+
+\bibitem[{\textit{Lebauer et~al.}(2013)\textit{Lebauer, Dietze, and
+  Bolker}}]{LEBAUER2013}
+Lebauer, D.~S., M.~C. Dietze, and B.~M. Bolker (2013), {Translating Probability
+  Density Functions: From R to BUGS and Back Again}, \textit{The R Journal},
+  \textit{5}(1), 207--209.
+
+\bibitem[{\textit{Reich et~al.}(2007)\textit{Reich, Wright, and
+  Lusk}}]{Reich2007}
+Reich, P.~B., I.~J. Wright, and C.~H. Lusk (2007), {Predicting leaf physiology
+  from simple plant and climate attributes: A global glopnet analysis},
+  \textit{Ecological Applications}, \textit{17}(7), 1982--1988.
+
+\bibitem[{\textit{Wright et~al.}(2004)\textit{Wright, Reich, Westoby, Ackerly,
+  Baruch, Bongers, Cavender-bares, Chapin, Cornelissen, Diemer, Flexas,
+  Garnier, Groom, Gulias, Hikosaka, Lamont, Lee, Lee, Lusk, Midgley, Navas,
+  Niinemets, Oleksyn, Osada, Poorter, Poot, Prior, Pyankov, Roumet, Thomas,
+  Tjoelker, Veneklaas, and Villar}}]{Wright}
+Wright, I.~J., P.~B. Reich, M.~Westoby, D.~D. Ackerly, Z.~Baruch, F.~Bongers,
+  J.~Cavender-bares, T.~Chapin, J.~H.~C. Cornelissen, M.~Diemer, J.~Flexas,
+  E.~Garnier, P.~K. Groom, J.~Gulias, K.~Hikosaka, B.~B. Lamont, T.~Lee,
+  W.~Lee, C.~Lusk, J.~J. Midgley, M.-L. Navas, U.~Niinemets, J.~Oleksyn,
+  N.~Osada, H.~Poorter, P.~Poot, L.~Prior, V.~I. Pyankov, C.~Roumet, S.~C.
+  Thomas, M.~G. Tjoelker, E.~J. Veneklaas, and R.~Villar (2004), {The worldwide
+  leaf economics spectrum.}, \textit{Nature}, \textit{428}(6985), 821--7,
+  \doi{10.1038/nature02403}.
+
+\bibitem[{\textit{Wright et~al.}(2005)\textit{Wright, Reich, Cornelissen,
+  Falster, Hikosaka, Lamont, Lee, Oleksyn, Osada, Poorter, Villar, Warton,
+  Westoby, and Garnier}}]{Wright2005}
+Wright, I.~J., P.~B. Reich, J.~H.~C. Cornelissen, D.~S. Falster, K.~Hikosaka,
+  B.~B. Lamont, W.~Lee, J.~Oleksyn, N.~Osada, H.~Poorter, R.~Villar, D.~I.
+  Warton, M.~Westoby, and E.~Garnier (2005), {Assessing the generality of leaf
+  trait of global relationships}, \textit{New Phytologist}, \textit{166}(2),
+  485--496.
+
+\end{thebibliography}
